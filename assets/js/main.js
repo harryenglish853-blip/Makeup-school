@@ -340,7 +340,7 @@
     });
     if (PREVIEW && items.some(function (s) { return s.confirmed === false; })) {
       note.hidden = false;
-      note.innerHTML = "<strong>Preview:</strong> services marked Draft are suggestions from the brief. Confirm which Regina offers, add prices/durations, then set <code>confirmed: true</code>. Unconfirmed services are hidden at launch.";
+      note.innerHTML = "<strong>Draft:</strong> the services marked Draft are suggestions. Please confirm which ones you offer and send the price and duration for each. Anything unconfirmed won’t appear on the live site.";
     }
   }
 
@@ -493,7 +493,7 @@
     wireTablist(tabs);
     if (PREVIEW && items.some(function (c) { return c.confirmed === false; })) {
       note.hidden = false;
-      note.innerHTML = "<strong>Preview:</strong> these cards show the course layout only. Add Regina’s real programs — name, overview, and only verified duration, schedule, tuition, requirements, kit and certification — in <code>config.js</code>.";
+      note.innerHTML = "<strong>Draft:</strong> these cards show the course layout only. Please send each program’s name and overview, plus its duration, schedule, tuition, requirements, kit and certification where they apply.";
     }
   }
 
@@ -812,7 +812,7 @@
         }
 
         if (PREVIEW) {
-          status(form, "info", "Preview: nothing was sent.", "Your entries passed validation, but this form isn’t connected yet. Add <code>links.formEndpoint</code> or <code>business.email</code> in config.js before launch.");
+          status(form, "info", "Draft preview: nothing was sent.", "The form checked your entries correctly. Once the site is connected, requests like this will arrive in your inbox.");
         } else {
           status(form, "error", "Online messages are unavailable right now.", contactFallback ? "Please reach us at " + contactFallback + "." : "Please try again later.");
         }
@@ -991,12 +991,12 @@
     need(((C.testimonials || {}).salon || []).length + ((C.testimonials || {}).school || []).length, "Authentic reviews", "testimonials");
     need(["salon", "school"].every(function (k) { return ((C.faq || {})[k] || []).every(function (f) { return filled(faqAnswer(f.a)); }); }), "FAQ answers", "faq");
     items.push(["Legal review of Privacy Policy & Terms", "privacy.html / terms.html"]);
-    items.push(["Set preview: false", "top of config.js"]);
+    items.push(["Final approval to go live", "top of config.js → preview: false"]);
 
     var bar = $("#preview-bar");
     bar.hidden = false;
-    $("#preview-count").textContent = (items.length - 1) + " items need verified business information before launch.";
-    $("#preview-open").textContent = "Launch checklist (" + (items.length - 1) + ")";
+    $("#preview-count").textContent = (items.length - 1) + " details needed from you before launch.";
+    $("#preview-open").textContent = "What we need (" + (items.length - 1) + ")";
     $("#checklist-list").innerHTML = items.map(function (i) { return "<li><strong>" + esc(i[0]) + "</strong><span>" + esc(i[1]) + "</span></li>"; }).join("");
     $("#preview-open").addEventListener("click", function () { $("#checklist").showModal(); });
   }

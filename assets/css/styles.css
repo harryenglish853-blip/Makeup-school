@@ -167,7 +167,7 @@ em { font-style: italic; }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: fixed; inset: 0 0 auto 0; z-index: 60; color: var(--text-light);
+  position: fixed; inset: 0 0 auto 0; z-index: 60; color: var(--text-light); padding-top: env(safe-area-inset-top, 0px);
   transition: background .5s var(--ease), transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .site-header__inner {
@@ -803,7 +803,7 @@ html:not(.js) .school-transition__content, .reduce-motion .school-transition__co
 .checklist li { padding: 10px 0 10px 28px; border-bottom: 1px solid var(--line); position: relative; font-size: .92rem; }
 .checklist li::before { content: ""; position: absolute; left: 4px; top: 16px; width: 12px; height: 12px; border: 1px solid var(--gold); }
 .checklist li strong { display: block; font-weight: 600; }
-.checklist li span { color: var(--muted); }
+.checklist li span { display: none; } /* config paths: see README */
 
 /* ---------- Scroll reveals ---------- */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out); transition-delay: var(--rd, 0s); }
