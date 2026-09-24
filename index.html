@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Regina Valenzuela Salon &amp; Makeup School | Beauty Services &amp; Makeup Classes</title>
+  <meta name="description" content="Regina Valenzuela Salon & Makeup School — professional beauty services and hands-on makeup education. Book a salon appointment or explore makeup courses.">
+  <meta name="theme-color" content="#1c1410">
+  <meta name="color-scheme" content="light">
+
+  <!-- Set the canonical/og:url once the domain is live (see README). -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Regina Valenzuela Salon & Makeup School">
+  <meta property="og:title" content="Regina Valenzuela Salon & Makeup School">
+  <meta property="og:description" content="Where beauty becomes art. Professional beauty services and hands-on makeup education.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Regina Valenzuela — Salon & Makeup School. Where beauty becomes art.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Regina Valenzuela Salon & Makeup School">
+  <meta name="twitter:description" content="Where beauty becomes art. Professional beauty services and hands-on makeup education.">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preview banner (only rendered while config.preview is true) -->
+  <div class="preview-bar" id="preview-bar" hidden>
+    <p><strong>Preview mode.</strong> <span id="preview-count"></span></p>
+    <button type="button" class="preview-bar__btn" id="preview-open">View launch checklist</button>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Regina Valenzuela Salon & Makeup School — home">
+        <span class="brand__name">Regina Valenzuela</span>
+        <span class="brand__sub">Salon &amp; Makeup School</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#salon">Salon</a></li>
+          <li><a href="#school">Makeup School</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About Regina</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--small btn--outline-light js-enroll" href="#inquire">Student Inquiry</a>
+        <a class="btn btn--small btn--gold js-book" href="#inquire">Book Appointment</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle">
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="#salon">Salon</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#school">Makeup School</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About Regina</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a class="btn btn--gold btn--block js-book" href="#inquire">Book Salon Appointment</a>
+      <a class="btn btn--outline-light btn--block js-enroll" href="#inquire">Explore Makeup School</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__light"></div>
+        <canvas class="hero__powder" id="powder"></canvas>
+        <svg class="hero__brush" viewBox="0 0 900 120" preserveAspectRatio="xMidYMid meet" focusable="false">
+          <defs>
+            <linearGradient id="handle" x1="0" x2="1">
+              <stop offset="0" stop-color="#140d09"/><stop offset=".55" stop-color="#3a2a20"/><stop offset="1" stop-color="#1b120d"/>
+            </linearGradient>
+            <linearGradient id="ferrule" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#f1dfb8"/><stop offset=".45" stop-color="#b8955a"/><stop offset="1" stop-color="#6f5530"/>
+            </linearGradient>
+            <linearGradient id="bristle" x1="0" x2="1">
+              <stop offset="0" stop-color="#e9d6c0"/><stop offset=".7" stop-color="#c9a792"/><stop offset="1" stop-color="#a77d6a"/>
+            </linearGradient>
+          </defs>
+          <path d="M20 60 C 20 52, 30 50, 60 51 L 520 55 L 520 65 L 60 69 C 30 70, 20 68, 20 60 Z" fill="url(#handle)"/>
+          <rect x="518" y="49" width="120" height="22" rx="4" fill="url(#ferrule)"/>
+          <path d="M636 48 C 700 34, 790 30, 860 56 C 876 60, 876 60, 860 64 C 790 90, 700 86, 636 72 Z" fill="url(#bristle)"/>
+        </svg>
+        <video class="hero__video" id="hero-video" muted loop playsinline preload="none" hidden></video>
+        <div class="hero__vignette"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light hero__eyebrow reveal-hero" style="--d:.2s">Salon · Makeup School</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line reveal-hero" style="--d:.45s">Regina</span>
+          <span class="hero__line reveal-hero" style="--d:.65s">Valenzuela</span>
+          <span class="hero__descriptor reveal-hero" style="--d:.95s">Salon &amp; Makeup School</span>
+        </h1>
+        <p class="hero__tagline reveal-hero" style="--d:1.25s"><em>Where Beauty Becomes Art.</em></p>
+        <p class="hero__copy reveal-hero" style="--d:1.45s">Professional beauty services and hands-on makeup education designed to inspire confidence, creativity, and excellence.</p>
+        <div class="hero__actions reveal-hero" style="--d:1.65s">
+          <a class="btn btn--gold js-book" href="#inquire">Book Salon Appointment</a>
+          <a class="btn btn--outline-light" href="#school">Explore Makeup School</a>
+        </div>
+      </div>
+
+      <p class="hero__reel" aria-hidden="true"><span id="reel-word">Brushes</span></p>
+      <a class="hero__scroll" href="#paths"><span>Scroll</span><span class="hero__scroll-line" aria-hidden="true"></span></a>
+    </section>
+
+    <!-- ============ TWO PATHS ============ -->
+    <section class="paths" id="paths" aria-label="Choose your path">
+      <a class="path path--salon" href="#salon">
+        <div class="path__media" data-slot="path-salon" data-tone="blush" data-shot="Stylist finishing a client’s hair at the mirror"></div>
+        <div class="path__body">
+          <p class="eyebrow eyebrow--light">01 — The Salon</p>
+          <h2 class="path__title">Your beauty.<br><em>Elevated.</em></h2>
+          <p class="path__copy">Discover professional beauty services created around you.</p>
+          <span class="path__cta">Explore Salon <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="path path--school" href="#school">
+        <div class="path__media" data-slot="path-school" data-tone="espresso" data-shot="Instructor demonstrating while students practice"></div>
+        <div class="path__body">
+          <p class="eyebrow eyebrow--light">02 — The Makeup School</p>
+          <h2 class="path__title">Turn your passion<br><em>into skill.</em></h2>
+          <p class="path__copy">Learn professional makeup techniques through practical, hands-on education.</p>
+          <span class="path__cta">Explore the School <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============ SALON ============ -->
+    <section class="salon section" id="salon" aria-labelledby="salon-title">
+      <div class="container salon__intro">
+        <div class="salon__text">
+          <p class="eyebrow reveal">The Salon</p>
+          <h2 class="display reveal" id="salon-title">Beauty,<br><em>personalized.</em></h2>
+          <p class="lede reveal">Every appointment begins with you — your features, your style, your moment. The work is considered, unhurried and precise, so the result feels unmistakably like you, only elevated.</p>
+          <div class="reveal">
+            <a class="btn btn--dark js-book" href="#inquire">Book an Appointment</a>
+            <a class="link-arrow" href="#services">View services <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="salon__images">
+          <figure class="frame frame--tall reveal-mask" data-slot="salon-intro-1" data-tone="champagne" data-shot="Close-up: makeup application in warm window light"></figure>
+          <figure class="frame frame--small reveal-mask" data-slot="salon-intro-2" data-tone="nude" data-shot="Detail: glossy hair, soft highlights"></figure>
+        </div>
+      </div>
+
+      <div class="container services" id="services" aria-labelledby="services-title">
+        <div class="section-head">
+          <p class="eyebrow reveal">Services</p>
+          <h2 class="h2 reveal" id="services-title">The service menu</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter services" id="service-filters"></div>
+        <div class="service-list" id="service-list" aria-live="polite"></div>
+        <p class="note" id="services-note" hidden></p>
+      </div>
+    </section>
+
+    <!-- ============ BRIDAL ============ -->
+    <section class="bridal section section--dark" id="bridal" aria-labelledby="bridal-title">
+      <div class="container bridal__grid">
+        <figure class="frame frame--tall bridal__img1 reveal-mask" data-slot="bridal-1" data-tone="blush" data-shot="Bridal makeup — natural skin texture, close-up"></figure>
+        <div class="bridal__text">
+          <p class="eyebrow eyebrow--light reveal">Bridal &amp; Special Occasions</p>
+          <h2 class="display display--light reveal" id="bridal-title">For the moments<br>you’ll <em>never forget.</em></h2>
+          <p class="lede lede--light reveal">From the first trial to the final reveal, your wedding-day beauty is planned around you — your dress, your light, your story.</p>
+          <div class="reveal"><a class="btn btn--gold" href="#inquire" data-inquiry="salon" data-interest="Bridal">Inquire About Bridal Services</a></div>
+          <p class="draft-note" id="bridal-draft" hidden>Draft — confirm bridal services are offered before launch.</p>
+        </div>
+        <figure class="frame frame--wide bridal__img2 reveal-mask" data-slot="bridal-2" data-tone="champagne" data-shot="Preparation — veil, hair pins, final details"></figure>
+        <figure class="frame frame--small bridal__img3 reveal-mask" data-slot="bridal-3" data-tone="nude" data-shot="The final reveal — an emotional moment"></figure>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="section transformations" id="transformations" aria-labelledby="ba-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Transformations</p>
+          <h2 class="h2 reveal" id="ba-title">Before &amp; after</h2>
+          <p class="section-sub reveal">Drag the handle — or use your arrow keys — to compare.</p>
+        </div>
+        <div class="filters filters--center" role="group" aria-label="Filter transformations" id="ba-filters"></div>
+        <div class="ba-stage" id="ba-stage"></div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">Portfolio</p>
+            <h2 class="display reveal" id="portfolio-title">The <em>work.</em></h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter portfolio" id="portfolio-filters"></div>
+        </div>
+        <div class="portfolio__grid" id="portfolio-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ SCHOOL TRANSITION ============ -->
+    <section class="school-transition" id="school" aria-labelledby="school-title">
+      <div class="school-transition__sticky">
+        <svg class="stroke" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="strokeGrad" x1="0" x2="1">
+              <stop offset="0" stop-color="#d8b4a6"/><stop offset=".5" stop-color="#e8d9c3"/><stop offset="1" stop-color="#b8955a"/>
+            </linearGradient>
+          </defs>
+          <path id="stroke-path" d="M-80 380 C 240 250, 520 470, 820 320 S 1360 170, 1700 300" fill="none" stroke="url(#strokeGrad)" stroke-width="120" stroke-linecap="round"/>
+        </svg>
+        <div class="school-transition__content">
+          <p class="eyebrow eyebrow--light">The Makeup School</p>
+          <h2 class="display display--light school-transition__title" id="school-title">Learn the art.<br><em>Master the technique.</em></h2>
+          <p class="lede lede--light">Professional makeup education for aspiring artists ready to develop their technique, confidence, and creativity.</p>
+          <a class="btn btn--gold" href="#courses">Explore Courses</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark school-intro" aria-label="Inside the classroom">
+      <div class="container school-intro__grid">
+        <figure class="frame frame--wide reveal-mask" data-slot="school-1" data-tone="espresso" data-shot="Instructor demonstration — students watching closely"></figure>
+        <figure class="frame frame--tall reveal-mask" data-slot="school-2" data-tone="blush" data-shot="Hands-on practice — brushes, kits, color theory"></figure>
+        <ul class="topic-list reveal" aria-label="Areas of study">
+          <li>Complexion</li><li>Color theory</li><li>Eye makeup</li><li>Tools &amp; brushes</li><li>Sanitation</li><li>Hands-on practice</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ COURSES ============ -->
+    <section class="section courses" id="courses" aria-labelledby="courses-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">Courses</p>
+            <h2 class="display reveal" id="courses-title">Programs</h2>
+          </div>
+          <p class="section-sub reveal">Choose a program to see what you’ll learn and the full course details.</p>
+        </div>
+        <div class="course-tabs" role="tablist" aria-label="Courses" id="course-tabs"></div>
+        <div id="course-panels"></div>
+        <p class="note" id="courses-note" hidden></p>
+      </div>
+    </section>
+
+    <!-- ============ WHY STUDY HERE ============ -->
+    <section class="section section--cream why" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Why study here</p>
+          <h2 class="display reveal" id="why-title">Learning that lives <em>in your hands.</em></h2>
+        </div>
+        <ol class="why__list" id="why-list"></ol>
+      </div>
+    </section>
+
+    <!-- ============ MEET REGINA ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="frame frame--portrait about__portrait reveal-mask" data-slot="regina-portrait" data-tone="champagne" data-shot="Portrait of Regina — natural light, editorial"></figure>
+        <div class="about__text">
+          <p class="eyebrow reveal">Founder &amp; Educator</p>
+          <h2 class="display reveal" id="about-title">Meet <em>Regina.</em></h2>
+          <div class="about__story reveal" id="regina-story"></div>
+          <ul class="credentials" id="regina-credentials" hidden></ul>
+        </div>
+      </div>
+      <figure class="quote container reveal" id="regina-quote">
+        <blockquote><p id="regina-quote-text"></p></blockquote>
+        <figcaption>— Regina Valenzuela <span class="draft-badge" id="quote-draft" hidden>Draft quote — confirm with Regina</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ STUDENT WORK ============ -->
+    <section class="section section--cream student-work" id="student-work" aria-labelledby="sw-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">Student Work</p>
+            <h2 class="display reveal" id="sw-title">Created by <em>our students.</em></h2>
+          </div>
+          <a class="link-arrow reveal js-enroll" href="#inquire">Start your own journey <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="student-grid" id="student-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal">Kind Words</p>
+          <h2 class="display reveal" id="reviews-title">In their <em>words.</em></h2>
+        </div>
+        <div class="tabs tabs--center" role="tablist" aria-label="Review category">
+          <button class="tab" role="tab" id="tab-rev-salon" aria-controls="rev-salon" aria-selected="true">Salon Clients</button>
+          <button class="tab" role="tab" id="tab-rev-school" aria-controls="rev-school" aria-selected="false" tabindex="-1">Makeup Students</button>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="rev-salon" aria-labelledby="tab-rev-salon" tabindex="0"></div>
+        <div class="tab-panel" role="tabpanel" id="rev-school" aria-labelledby="tab-rev-school" tabindex="0" hidden></div>
+      </div>
+    </section>
+
+    <!-- ============ THE EXPERIENCE ============ -->
+    <section class="experience section--dark" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--light">The Experience</p>
+            <h2 class="h2 h2--light" id="exp-title">What it feels like</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Experience">
+            <button class="tab tab--light" role="tab" id="tab-exp-salon" aria-controls="exp-salon" aria-selected="true">For Clients</button>
+            <button class="tab tab--light" role="tab" id="tab-exp-school" aria-controls="exp-school" aria-selected="false" tabindex="-1">For Students</button>
+          </div>
+        </div>
+        <ol class="steps tab-panel" role="tabpanel" id="exp-salon" aria-labelledby="tab-exp-salon">
+          <li><span class="steps__n">01</span><span class="steps__word">Arrive.</span><span class="steps__line">Your time begins the moment you walk in.</span></li>
+          <li><span class="steps__n">02</span><span class="steps__word">Consult.</span><span class="steps__line">We listen to how you want to look — and feel.</span></li>
+          <li><span class="steps__n">03</span><span class="steps__word">Create.</span><span class="steps__line">Technique and artistry, applied with care.</span></li>
+          <li><span class="steps__n">04</span><span class="steps__word">Transform.</span><span class="steps__line">See yourself, elevated.</span></li>
+          <li><span class="steps__n">05</span><span class="steps__word">Confidence.</span><span class="steps__line">Leave ready for your moment.</span></li>
+        </ol>
+        <ol class="steps tab-panel" role="tabpanel" id="exp-school" aria-labelledby="tab-exp-school" hidden>
+          <li><span class="steps__n">01</span><span class="steps__word">Discover.</span><span class="steps__line">Find the artist you want to become.</span></li>
+          <li><span class="steps__n">02</span><span class="steps__word">Learn.</span><span class="steps__line">Understand the why behind every technique.</span></li>
+          <li><span class="steps__n">03</span><span class="steps__word">Practice.</span><span class="steps__line">Build skill through repetition, hands-on.</span></li>
+          <li><span class="steps__n">04</span><span class="steps__word">Master.</span><span class="steps__line">Refine until it becomes second nature.</span></li>
+          <li><span class="steps__n">05</span><span class="steps__word">Create.</span><span class="steps__line">Make work that is unmistakably yours.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SOCIAL ============ -->
+    <section class="section social" id="social" aria-labelledby="social-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow reveal">Instagram</p>
+            <h2 class="display reveal" id="social-title">Follow the <em>artistry.</em></h2>
+          </div>
+          <a class="btn btn--dark reveal" id="social-follow" href="#contact" target="_blank" rel="noopener">Follow</a>
+        </div>
+        <div class="social__strip" id="social-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--cream faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div>
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 class="display reveal" id="faq-title">Questions, <em>answered.</em></h2>
+          <p class="section-sub reveal">Can’t find what you’re looking for? <a href="#inquire" class="text-link">Send us a message</a>.</p>
+        </div>
+        <div>
+          <div class="tabs" role="tablist" aria-label="FAQ category">
+            <button class="tab" role="tab" id="tab-faq-salon" aria-controls="faq-salon" aria-selected="true">Salon</button>
+            <button class="tab" role="tab" id="tab-faq-school" aria-controls="faq-school" aria-selected="false" tabindex="-1">Makeup School</button>
+          </div>
+          <div class="tab-panel faq__list" role="tabpanel" id="faq-salon" aria-labelledby="tab-faq-salon"></div>
+          <div class="tab-panel faq__list" role="tabpanel" id="faq-school" aria-labelledby="tab-faq-school" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--dark contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--light reveal">Contact &amp; Booking</p>
+          <h2 class="display display--light reveal" id="contact-title">Your next chapter<br><em>starts here.</em></h2>
+        </div>
+
+        <div class="choose" role="group" aria-label="What are you looking for?">
+          <button type="button" class="choose__card" data-choose="salon" aria-pressed="true">
+            <span class="choose__kicker">I’m looking for</span>
+            <span class="choose__title">Beauty services</span>
+            <span class="choose__cta">Book an appointment →</span>
+          </button>
+          <button type="button" class="choose__card" data-choose="school" aria-pressed="false">
+            <span class="choose__kicker">I want to</span>
+            <span class="choose__title">Learn makeup</span>
+            <span class="choose__cta">Courses &amp; information →</span>
+          </button>
+        </div>
+
+        <div class="contact__grid" id="inquire" tabindex="-1">
+          <!-- Salon form -->
+          <form class="form" id="form-salon" data-form="salon" novalidate aria-labelledby="form-salon-title">
+            <h3 class="form__title" id="form-salon-title">Request an appointment</h3>
+            <p class="form__intro" id="salon-form-intro">Tell us what you’re looking for and we’ll be in touch to confirm your appointment.</p>
+            <div class="form__row">
+              <div class="field">
+                <label for="s-name">Full name <span aria-hidden="true">*</span></label>
+                <input id="s-name" name="name" type="text" autocomplete="name" required>
+                <p class="field__error" id="s-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="s-email">Email <span aria-hidden="true">*</span></label>
+                <input id="s-email" name="email" type="email" autocomplete="email" required>
+                <p class="field__error" id="s-email-err"></p>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="s-phone">Phone</label>
+                <input id="s-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+                <p class="field__error" id="s-phone-err"></p>
+              </div>
+              <div class="field">
+                <label for="s-date">Preferred date</label>
+                <input id="s-date" name="preferredDate" type="date">
+                <p class="field__error" id="s-date-err"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="s-service">Service of interest <span aria-hidden="true">*</span></label>
+              <select id="s-service" name="service" required></select>
+              <p class="field__error" id="s-service-err"></p>
+            </div>
+            <div class="field">
+              <label for="s-message">Anything we should know?</label>
+              <textarea id="s-message" name="message" rows="4" maxlength="2000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true"><label for="s-company">Company</label><input id="s-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="field field--check">
+              <input id="s-consent" name="consent" type="checkbox" required>
+              <label for="s-consent">I agree to be contacted about my request. See our <a href="privacy.html" class="text-link">Privacy Policy</a>.</label>
+              <p class="field__error" id="s-consent-err"></p>
+            </div>
+            <button class="btn btn--gold btn--block" type="submit">Send Request</button>
+            <div class="form__status" role="status" aria-live="polite"></div>
+          </form>
+
+          <!-- School form -->
+          <form class="form" id="form-school" data-form="school" novalidate aria-labelledby="form-school-title" hidden>
+            <h3 class="form__title" id="form-school-title">Student inquiry</h3>
+            <p class="form__intro" id="school-form-intro">Ask about courses, schedules and enrollment. We’ll reply with the details.</p>
+            <div class="form__row">
+              <div class="field">
+                <label for="c-name">Full name <span aria-hidden="true">*</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" required>
+                <p class="field__error" id="c-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="c-email">Email <span aria-hidden="true">*</span></label>
+                <input id="c-email" name="email" type="email" autocomplete="email" required>
+                <p class="field__error" id="c-email-err"></p>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="c-phone">Phone</label>
+                <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+                <p class="field__error" id="c-phone-err"></p>
+              </div>
+              <div class="field">
+                <label for="c-course">Course of interest <span aria-hidden="true">*</span></label>
+                <select id="c-course" name="course" required></select>
+                <p class="field__error" id="c-course-err"></p>
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>Makeup experience</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="experience" value="None yet" checked><span>None yet</span></label>
+                <label class="pill"><input type="radio" name="experience" value="Self-taught"><span>Self-taught</span></label>
+                <label class="pill"><input type="radio" name="experience" value="Working artist"><span>Working artist</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="c-message">Questions or goals</label>
+              <textarea id="c-message" name="message" rows="4" maxlength="2000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true"><label for="c-company">Company</label><input id="c-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="field field--check">
+              <input id="c-consent" name="consent" type="checkbox" required>
+              <label for="c-consent">I agree to be contacted about the makeup school. See our <a href="privacy.html" class="text-link">Privacy Policy</a>.</label>
+              <p class="field__error" id="c-consent-err"></p>
+            </div>
+            <button class="btn btn--gold btn--block" type="submit">Request Information</button>
+            <div class="form__status" role="status" aria-live="polite"></div>
+          </form>
+
+          <aside class="details" aria-labelledby="details-title">
+            <h3 class="form__title" id="details-title">Visit &amp; connect</h3>
+            <div class="details__actions" id="contact-actions"></div>
+            <dl class="details__list" id="contact-list"></dl>
+            <div class="map" id="map"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a class="brand brand--footer" href="#top">
+          <span class="brand__name">Regina Valenzuela</span>
+          <span class="brand__sub">Salon &amp; Makeup School</span>
+        </a>
+        <p class="footer__tag"><em>Where Beauty Becomes Art.</em></p>
+      </div>
+      <div class="footer__cols">
+        <nav aria-label="Salon">
+          <h2 class="footer__h">Salon</h2>
+          <ul>
+            <li><a href="#salon">Salon</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#inquire" class="js-book">Book Appointment</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Makeup School">
+          <h2 class="footer__h">Makeup School</h2>
+          <ul>
+            <li><a href="#school">Makeup School</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#student-work">Student Work</a></li>
+            <li><a href="#inquire" class="js-enroll">Student Inquiry</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Studio">
+          <h2 class="footer__h">Studio</h2>
+          <ul>
+            <li><a href="#about">About Regina</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__h">Follow</h2>
+          <ul id="footer-social"></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Regina Valenzuela Salon &amp; Makeup School. All rights reserved.</p>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky actions -->
+  <div class="dock" id="dock">
+    <a class="dock__btn dock__btn--gold js-book" href="#inquire">Book Appointment</a>
+    <a class="dock__btn js-enroll" href="#inquire">Makeup School</a>
+  </div>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="lightbox__close" type="button" data-close>Close <span aria-hidden="true">×</span></button>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-cap"></p>
+  </dialog>
+
+  <!-- Launch checklist (preview only) -->
+  <dialog class="checklist" id="checklist" aria-labelledby="checklist-title">
+    <div class="checklist__head">
+      <h2 id="checklist-title">Launch checklist</h2>
+      <button type="button" class="lightbox__close" data-close>Close <span aria-hidden="true">×</span></button>
+    </div>
+    <p>These facts must be supplied and verified in <code>assets/js/config.js</code> before launch. Nothing below is displayed as fact until it’s filled in.</p>
+    <ul id="checklist-list"></ul>
+  </dialog>
+
+  <noscript><p class="noscript">For the full experience please enable JavaScript. You can still navigate every section.</p></noscript>
+</body>
+</html>
