@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Regina Valenzuela Salon &amp; Makeup School | Beauty Services &amp; Makeup Classes</title>
   <meta name="description" content="Regina Valenzuela Salon & Makeup School — professional beauty services and hands-on makeup education. Book a salon appointment or explore makeup courses.">
-  <meta name="theme-color" content="#1c1410">
+  <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="light">
 
   <!-- Set the canonical/og:url once the domain is live (see README). -->
@@ -29,7 +29,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500&family=Manrope:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <script src="assets/js/config.js"></script>
@@ -37,6 +37,14 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="lash" viewBox="0 0 240 60">
+      <path d="M3 45 C 8 41, 16 40, 28 42 C 80 50, 140 48, 178 37 C 200 30, 216 18, 236 3 C 220 22, 204 35, 180 42 C 140 53, 80 53, 28 44 C 16 42, 9 43, 3 45 Z"/>
+      <path d="M132 47 C 158 43, 178 30, 196 13 C 185 31, 165 44, 138 49 Z"/>
+      <path d="M149 46 C 174 40, 194 26, 212 9 C 201 28, 182 42, 155 48 Z"/>
+      <path d="M166 45 C 190 37, 210 22, 229 5 C 218 25, 197 40, 172 47 Z"/>
+    </symbol>
+  </svg>
 
   <!-- Preview banner (only rendered while config.preview is true) -->
   <div class="preview-bar" id="preview-bar" hidden>
@@ -47,6 +55,7 @@
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#top" aria-label="Regina Valenzuela Salon & Makeup School — home">
+        <svg class="lash brand__lash" aria-hidden="true" focusable="false"><use href="#lash"/></svg>
         <span class="brand__name">Regina Valenzuela</span>
         <span class="brand__sub">Salon &amp; Makeup School</span>
       </a>
@@ -98,32 +107,16 @@
       <div class="hero__media" aria-hidden="true">
         <div class="hero__light"></div>
         <canvas class="hero__powder" id="powder"></canvas>
-        <svg class="hero__brush" viewBox="0 0 900 120" preserveAspectRatio="xMidYMid meet" focusable="false">
-          <defs>
-            <linearGradient id="handle" x1="0" x2="1">
-              <stop offset="0" stop-color="#140d09"/><stop offset=".55" stop-color="#3a2a20"/><stop offset="1" stop-color="#1b120d"/>
-            </linearGradient>
-            <linearGradient id="ferrule" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#f1dfb8"/><stop offset=".45" stop-color="#b8955a"/><stop offset="1" stop-color="#6f5530"/>
-            </linearGradient>
-            <linearGradient id="bristle" x1="0" x2="1">
-              <stop offset="0" stop-color="#e9d6c0"/><stop offset=".7" stop-color="#c9a792"/><stop offset="1" stop-color="#a77d6a"/>
-            </linearGradient>
-          </defs>
-          <path d="M20 60 C 20 52, 30 50, 60 51 L 520 55 L 520 65 L 60 69 C 30 70, 20 68, 20 60 Z" fill="url(#handle)"/>
-          <rect x="518" y="49" width="120" height="22" rx="4" fill="url(#ferrule)"/>
-          <path d="M636 48 C 700 34, 790 30, 860 56 C 876 60, 876 60, 860 64 C 790 90, 700 86, 636 72 Z" fill="url(#bristle)"/>
-        </svg>
         <video class="hero__video" id="hero-video" muted loop playsinline preload="none" hidden></video>
         <div class="hero__vignette"></div>
       </div>
 
       <div class="hero__content">
-        <p class="eyebrow eyebrow--light hero__eyebrow reveal-hero" style="--d:.2s">Salon · Makeup School</p>
         <h1 class="hero__title" id="hero-title">
-          <span class="hero__line reveal-hero" style="--d:.45s">Regina</span>
-          <span class="hero__line reveal-hero" style="--d:.65s">Valenzuela</span>
-          <span class="hero__descriptor reveal-hero" style="--d:.95s">Salon &amp; Makeup School</span>
+          <svg class="lash hero__lash reveal-hero" style="--d:.2s" aria-hidden="true" focusable="false"><use href="#lash"/></svg>
+          <span class="hero__name reveal-hero" style="--d:.5s">Regina Valenzuela</span>
+          <span class="hero__divider reveal-hero" style="--d:.8s"><span>Salon &amp;</span></span>
+          <span class="hero__school reveal-hero" style="--d:1s">Makeup School</span>
         </h1>
         <p class="hero__tagline reveal-hero" style="--d:1.25s"><em>Where Beauty Becomes Art.</em></p>
         <p class="hero__copy reveal-hero" style="--d:1.45s">Professional beauty services and hands-on makeup education designed to inspire confidence, creativity, and excellence.</p>
@@ -237,7 +230,7 @@
         <svg class="stroke" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="strokeGrad" x1="0" x2="1">
-              <stop offset="0" stop-color="#d8b4a6"/><stop offset=".5" stop-color="#e8d9c3"/><stop offset="1" stop-color="#b8955a"/>
+              <stop offset="0" stop-color="#9a9a9a"/><stop offset=".5" stop-color="#f2f2f2"/><stop offset="1" stop-color="#6e6e6e"/>
             </linearGradient>
           </defs>
           <path id="stroke-path" d="M-80 380 C 240 250, 520 470, 820 320 S 1360 170, 1700 300" fill="none" stroke="url(#strokeGrad)" stroke-width="120" stroke-linecap="round"/>
@@ -533,7 +526,8 @@
     <div class="container">
       <div class="footer__top">
         <a class="brand brand--footer" href="#top">
-          <span class="brand__name">Regina Valenzuela</span>
+          <svg class="lash brand__lash" aria-hidden="true" focusable="false"><use href="#lash"/></svg>
+        <span class="brand__name">Regina Valenzuela</span>
           <span class="brand__sub">Salon &amp; Makeup School</span>
         </a>
         <p class="footer__tag"><em>Where Beauty Becomes Art.</em></p>

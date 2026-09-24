@@ -64,7 +64,7 @@
      ------------------------------------------------------------------ */
   function artPanel(tone, shot) {
     return '<div class="art" data-tone="' + esc(tone || "champagne") + '" aria-hidden="true">' +
-      '<svg class="art__lines" viewBox="0 0 400 500" preserveAspectRatio="none"><path d="M-20 360 C 80 300, 160 420, 260 330 S 380 250, 430 290" fill="none" stroke="rgba(255,250,240,.55)" stroke-width="1"/><path d="M-20 390 C 90 330, 170 450, 270 360 S 390 280, 430 320" fill="none" stroke="rgba(255,250,240,.3)" stroke-width="1"/></svg>' +
+      '<svg class="art__lines" viewBox="0 0 400 500" preserveAspectRatio="none"><path d="M-20 360 C 80 300, 160 420, 260 330 S 380 250, 430 290" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1"/><path d="M-20 390 C 90 330, 170 450, 270 360 S 390 280, 430 320" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1"/></svg>' +
       (shot ? '<span class="art__cap">' + esc(shot) + "</span>" : "") + "</div>";
   }
   function imgTag(src, alt, eager) {
@@ -248,7 +248,7 @@
     }
     function draw() {
       ctx.clearRect(0, 0, W, H);
-      var lx = W * .72, ly = H * .34, lr = Math.max(W, H) * .55;
+      var lx = W * .5, ly = H * .3, lr = Math.max(W, H) * .55;
       for (var i = 0; i < parts.length; i++) {
         var p = parts[i];
         p.w += .01; p.x += p.vx + Math.sin(p.w) * .15; p.y += p.vy + Math.cos(p.w * .8) * .08;
@@ -257,7 +257,7 @@
         var glow = Math.max(.12, 1 - d);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(246, 221, 188," + (p.a * glow).toFixed(3) + ")";
+        ctx.fillStyle = "rgba(255, 255, 255," + (p.a * glow).toFixed(3) + ")";
         ctx.fill();
       }
     }
